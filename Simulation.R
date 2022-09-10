@@ -31,7 +31,7 @@ Tabs <- list() #data storage
 datasets <- list()
 
 for (n.iter in 1:iter) { 
-  #set.seed(1234)
+  #set.seed(NULL)
   D <- 50 #grid
   x_predict <- seq(1,D,len=D)
   l <- 15
@@ -39,7 +39,6 @@ for (n.iter in 1:iter) {
   covi <- function(X, Y) outer(X, Y, SE, l) 
   COV <- covi(x_predict, x_predict)
   
-  #set.seed(NULL)
   n <- n.curves 
   t <- seq(0, D, length.out = D)
   values1 <- MASS::mvrnorm(n, sqrt(2)*sin(2*pi*2*t/D), COV) 
