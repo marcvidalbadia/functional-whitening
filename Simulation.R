@@ -69,7 +69,7 @@ for (n.iter in 1:iter) {
           Tab1[j,9]  <- wfobj$CORR2
           
         }
-      } else if (basisdim == 25) {#level basisdim
+      } else if (basisdim == 25) {
         for (i in witt) {
           
           j <- which(i==witt)
@@ -89,33 +89,34 @@ for (n.iter in 1:iter) {
 #END SIMULATION
 #------------------------------------------------------------------------------
 #Visualize results
+
 #Table 1
 files <- c("Tabs.RData","Tabs-500.RData","Tabs-1000.RData")
 load(paste("results/",files[1],sep="")) # <- Select 1 for n=180; 2, n=500; 3, n=1000
 Tabs.mean <- Reduce("+",Tabs) / length(Tabs)
-round(Tabs.mean,3)
+round(Tabs.mean[c(3,1,4,2,5),c(1,2,3,4,7,8,5,6,9,10)], 3)
 
 #Plot Figure 1
 Tabs <- array(unlist(Tabs), dim = c(5,10,iter))
-indx <- c()
-for (j in seq(1,9,2)) for (i in 1:5) indx <- append(indx,Tabs[i,j,])
-for (j in seq(2,10,2)) for (i in 1:5) indx <- append(indx,Tabs[i,j,])
-df <- as.data.frame(indx)
+Score <- c()
+for (j in seq(1,9,2)) for (i in 1:5) Score <- append(Score,Tabs[i,j,])
+for (j in seq(2,10,2)) for (i in 1:5) Score <- append(Score,Tabs[i,j,])
+df <- as.data.frame(Score)
 
-df$basis <- c(rep("basis 13",iter*25),rep("basis 25",iter*25))
-df$basis <- factor(df$basis, levels=c('basis 13','basis 25'))
+df$Basis <- c(rep("basis 13",iter*25),rep("basis 25",iter*25))
+df$Basis <- factor(df$Basis, levels=c('basis 13','basis 25'))
 
 h <- iter*5
-df$measure <- rep(c(rep('ISR',h),rep('trCROSS',h),rep('CROSS2',h),
+df$Measure <- rep(c(rep('ISR',h),rep('trCROSS',h),rep('CROSS2',h),
              rep('trCORR',h),rep('CORR2',h)),2)
-df$measure <- factor(df$measure, levels=c('ISR','trCROSS','trCORR','CROSS2','CORR2'))
-df$operator <- rep(c(rep('PCA',iter),rep('PCA-cor',iter),rep('ZCA',iter),
+df$Measure <- factor(df$Measure, levels=c('ISR','trCROSS','trCORR','CROSS2','CORR2'))
+df$Operator <- rep(c(rep('PCA',iter),rep('PCA-cor',iter),rep('ZCA',iter),
                      rep('ZCA-cor',iter),rep('Cholesky',iter)), 5)
-df$operator <- factor(df$operator, levels=c('ZCA','PCA','ZCA-cor','PCA-cor','Cholesky'))
+df$Operator <- factor(df$Operator, levels=c('ZCA','PCA','ZCA-cor','PCA-cor','Cholesky'))
 
-ggplot(data = df, aes(x=operator, y=indx)) + #700*500
-geom_boxplot(aes(fatten = NULL, fill = basis), position=position_dodge(.9),
+ggplot(data = df, aes(x=Operator, y=Score)) + #700*500
+geom_boxplot(aes(fatten = NULL, fill = Basis), position=position_dodge(.9),
              outlier.size = 0.08, color = "darkgrey", lwd = 0.1) +
-facet_wrap( ~ measure, scales="free") +
-scale_fill_brewer(palette = "Paired")
-
+#theme(axis.text.x=element_blank()) +
+facet_wrap( ~ Measure, scales="free") +
+scale_fill_brewer(palette = 1)
