@@ -8,7 +8,7 @@ whiten.fd  <- function (fdx,
                         post.center = FALSE) {
  
   #################################################################
-  # whiten.fd: R function to whiten functional data
+  # whiten.fd: R function for whitening functional data
   # fdx............a functional data object created with the fda package
   # proc...........whitening procedure
   # pre.center.....center the data before whitening
