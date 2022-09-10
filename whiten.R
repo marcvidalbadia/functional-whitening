@@ -19,6 +19,8 @@ whiten.fd  <- function (fdx,
   
   if (!(inherits(fdx, "fd"))) 
     stop("Argument FD  not a functional data object. See fda package")
+  if (!is.character(proc)) 
+    stop("Select a whitening method")
   
   anc <- mean.fd(fdx)$coefs
   if (pre.center) fdx <- center.fd(fdx);
