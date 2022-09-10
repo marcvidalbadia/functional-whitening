@@ -11,8 +11,8 @@ whiten.fd  <- function (fdx,
   # whiten.fd: R function for whitening functional data
   # fdx............a functional data object created with the fda package
   # proc...........whitening procedure
-  # pre.center.....center the data before whitening
-  # post.center....center the data after whitening
+  # pre.center.....centering before whitening
+  # post.center....centering after whitening
   #################################################################
   
   if (!(inherits(fdx, "fd"))) 
