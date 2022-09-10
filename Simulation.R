@@ -24,8 +24,8 @@ colnames(Tab1) <- c("ISR-B-13",
 #Results are provided bellow
 #Select parameters:
 
-iter <- 180 #iterations
-n.curves <- 1000 #number of curves
+iter <- 1000 #iterations
+n.curves <- 180 #number of curves
 #--
 Tabs <- list() #data storage
 datasets <- list()
