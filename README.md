@@ -2,4 +2,4 @@ This repository contains the results and source code for the simulation experime
 
 Vidal, M. and Aguilera A.M. (2022). Novel whitening approaches in functional settings. (Under review)
 
-See aslo the [Shiny app](https://mvidal.shinyapps.io/whitening/).
+See aslo the associated [Shiny app](https://mvidal.shinyapps.io/whitening/).
