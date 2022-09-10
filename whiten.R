@@ -15,14 +15,14 @@ whiten.fd  <- function (fdx,
   # post.center....center the data after whitening
   #################################################################
   
-  PD = function(U) return( sweep(U, 2, sign(diag(U)), "*") )
-  
   if (!(inherits(fdx, "fd"))) 
     stop("Argument FD  not a functional data object. See fda package")
  if (length(proc) != 1 & is.character(proc)) 
     pr <- "ZCA-cor"
   else if (!is.character(proc)) 
     stop("Select a whitening method")
+  
+  PD = function(U) return( sweep(U, 2, sign(diag(U)), "*") )
   
   anc <- mean.fd(fdx)$coefs
   if (pre.center) fdx <- center.fd(fdx);
