@@ -92,7 +92,7 @@ whiten.fd  <- function (fdx,
   CR <- cor(t(GChol%*%wfdx$coefs),t(GChol%*%a))
   CR <- (CR + t(CR))/2
   
-  #Trace & Compression indexes
+  #Trace & Compression indices
   trCROSS <- matrixcalc::hilbert.schmidt.norm(CC) 
   CROSS2 <- max(abs(diag(CC%*%t(CC))))
   
