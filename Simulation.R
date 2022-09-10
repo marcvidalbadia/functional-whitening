@@ -1,6 +1,7 @@
 #SIMULATION
 source("whiten.R")
 library(fda)
+library(matrixcalc)
 
 witt <- c("PCA","PCA-cor","ZCA","ZCA-cor","Cholesky")
 Tab1 <- matrix(0,5,10)
