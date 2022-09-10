@@ -115,7 +115,5 @@ df$Operator <- rep(c(rep('PCA',iter),rep('PCA-cor',iter),rep('ZCA',iter),
 df$Operator <- factor(df$Operator, levels=c('ZCA','PCA','ZCA-cor','PCA-cor','Cholesky'))
 
 ggplot(data = df, aes(x=Operator, y=Score)) +
-geom_boxplot(aes(fatten = NULL, fill = Basis), position=position_dodge(.9),
-             outlier.size = 0.08, color = "darkgrey", lwd = 0.1) +
-facet_wrap( ~ Measure, scales="free") +
-scale_fill_brewer(palette = 1)
+geom_boxplot(aes(fatten = NULL, fill = Basis),outlier.size = 0.08, color = "darkgrey", lwd = 0.1) +
+facet_wrap( ~ Measure, scales="free")
