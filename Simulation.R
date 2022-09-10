@@ -88,7 +88,7 @@ for (n.iter in 1:iter) {
 #END SIMULATION
 
 #------------------------------------------------------------------------------
-#Visualize results
+#Show results
 
 #Table 1
 files <- c("Tabs.RData","Tabs-500.RData","Tabs-1000.RData")
