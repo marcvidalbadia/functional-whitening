@@ -95,7 +95,7 @@ files <- c("Tabs.RData","Tabs-500.RData","Tabs-1000.RData")
 load(paste("results/",files[1],sep="")) # <- Select 1 for n=180; 2, n=500; 3, n=1000
 Tabs.mean <- Reduce("+",Tabs) / length(Tabs)
 round(Tabs.mean[c(3,1,4,2,5),c(1,2,3,4,7,8,5,6,9,10)], 3)
-
+#--
 #Plot Figure 1
 Tabs <- array(unlist(Tabs), dim = c(5,10,iter))
 Score <- c()
