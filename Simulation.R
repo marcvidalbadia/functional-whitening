@@ -52,7 +52,7 @@ for (n.iter in 1:iter) {
   
   pp <- 0 #penalty parameter
   datasets[[n.iter]] <- data
-  #TABLE
+
     for (basisdim in c(13,25)) {
       bbasis <- create.bspline.basis(rangeval=c(min(arg),max(arg)), nbasis=basisdim)
       fdx <- Data2fd(t(data), argvals=arg, bbasis, lambda=pp)
