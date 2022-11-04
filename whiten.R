@@ -93,15 +93,15 @@ whiten.fd  <- function (fdx,
   cross <- tcrossprod(a,wfdx$coefs)/nrep
   CC <- GChol %*% cross %*% t(GChol)
   CC <- (CC + t(CC))/2
-  CR <- cor(t(GChol%*%wfdx$coefs),t(GChol%*%a))
+  CR <- cor(t(GChol %*% wfdx$coefs),t(GChol %*% a))
   CR <- (CR + t(CR))/2
   
   #Trace & Compression indices
   trCROSS <- matrixcalc::hilbert.schmidt.norm(CC) 
-  CROSS2 <- max(abs(diag(CC%*%t(CC))))
+  CROSS2 <- max(abs(diag(CC %*% t(CC))))
   
   trCORR <- matrixcalc::hilbert.schmidt.norm(CR) 
-  CORR2 <- max(abs(diag(CR%*%t(CR))))
+  CORR2 <- max(abs(diag(CR %*% t(CR))))
 
   WFDX <- list(wfdx, ISR, trCROSS, CROSS2, trCORR, CORR2)
   names(WFDX) <- c("wfdx", "ISR", "trCROSS", "CROSS2", "trCORR", "CORR2")
