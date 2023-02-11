@@ -5,3 +5,10 @@ This repository contains the results and source code for the numerical experimen
 Execute `Simulation.R` in R environments for further details.
 
 See aslo the associated [Shiny app](https://mvidal.shinyapps.io/whitening/) and the [pfica](https://github.com/m-vidal/pfica) package v0.1.3.
+
+Note:
+Due to production errors
+
+```math
+SE = \frac{\sigma}{\sqrt{n}}
+```
