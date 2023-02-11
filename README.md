@@ -6,7 +6,7 @@ Execute `Simulation.R` in R environments for further details.
 
 See aslo the associated [Shiny app](https://mvidal.shinyapps.io/whitening/) and the [pfica](https://github.com/m-vidal/pfica) package v0.1.3.
 
-Note:
+:exclamation: Note:
 Due to production errors, equation 3 in pp. 3 is written as
 
 ```math
