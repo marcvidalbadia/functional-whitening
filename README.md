@@ -1,6 +1,6 @@
 This repository contains the results and source code for the numerical experiments in
 
-[**Vidal, M**, Aguilera, AM. Novel whitening approaches in functional settings. Stat. 2022;e516.]( https://doi.org/10.1002/sta4.516)
+[**Vidal, M.**, & Aguilera, A. M. (2023). Novel whitening approaches in functional settings. Stat, 12( 1), e516.]( https://doi.org/10.1002/sta4.516)
 
 Execute `Simulation.R` in R environments for further details.
 
