@@ -18,8 +18,4 @@ while was originally written as
 \langle f,g\rangle_{\mathbb{M}}=\sum_{j=1}^{\infty}\lambda^{-1}_j\left\langle f,\gamma_{j}\right\rangle \left\langle g,\gamma_{j}\right\rangle =\left\langle \varGamma^{1/2\dagger}f,\varGamma^{1/2\dagger}g\right\rangle  \quad  f,g \in \mathbb{M}.
 ```
 
-In section 4 the sentence "The adjustment between the original projected and whitened functional variable is usually measured by the minimization of 
-\begin{eqnarray*}
-E\|X-\mathbb{X}\|^2=\ \mathrm{tr}(\varGamma)-2\mathrm{tr}(\varGamma_{X\mathbb{X}})\ +\ \mathrm{tr}(\varGamma_{\mathbb{X}}),
-\end{eqnarray*}
-where $\varGamma_{X\mathbb{X}}=E(X\otimes\mathbb{X})$ is the cross-covariance operator between $X$ and $\mathbb{X}$."
+In section 4 the sentence "As $2$tr$(\varGamma_{X\mathbb{X}})$ is the only dependent between the original and the whitened variable, the minimization problem can be reduced to the maximization of tr$(\varGamma_{X\mathbb{X}})$."
