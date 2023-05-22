@@ -18,6 +18,6 @@ while was originally written as
 \langle f,g\rangle_{\mathbb{M}}=\sum_{j=1}^{\infty}\lambda^{-1}_j\left\langle f,\gamma_{j}\right\rangle \left\langle g,\gamma_{j}\right\rangle =\left\langle \varGamma^{1/2\dagger}f,\varGamma^{1/2\dagger}g\right\rangle  \quad  f,g \in \mathbb{M}.
 ```
 
-In section 4 the sentence "As 2tr$(\varGamma_{X\mathbb{X}})$ is the only dependence between the original and the whitened variable, the minimization problem can be reduced to the maximization of tr$(\varGamma_{X\mathbb{X}})$." reads also as "... is the only dependent term...".
+In section 4 the sentence "As `math 2tr(\varGamma_{X\mathbb{X}}) is the only dependence between the original and the whitened variable, the minimization problem can be reduced to the maximization of tr$(\varGamma_{X\mathbb{X}})$." reads also as "... is the only dependent term...".
 
 In 
