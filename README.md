@@ -21,4 +21,4 @@ while was originally written as
 
 In section 4, the sentence "As 2tr $(\varGamma_{X\mathbb{X}})$ is the only *dependence* between the original and the whitened variable, the minimization problem can be reduced to the maximization of tr $(\varGamma_{X\mathbb{X}})$." reads also as "... is the only **dependent term**...".
 
-In the Technical proofs (first paragraph), due to abuse of notation "Note that Condition 1 cannot be reached when $\langle X,\gamma_j\rangle^2=\lambda_j$, or for $c_j\rightarrow c>0$, $\langle X,\gamma_j\rangle^2=\lambda_jc_j$...", **$X$ stands for a deterministic function**.
+In the Technical proofs (first paragraph), due to abuse of notation, in the sentence "Note that Condition 1 cannot be reached when $\langle X,\gamma_j\rangle^2=\lambda_j$, or for $c_j\rightarrow c>0$, $\langle X,\gamma_j\rangle^2=\lambda_jc_j$...", **$X$ stands for a deterministic function**.
